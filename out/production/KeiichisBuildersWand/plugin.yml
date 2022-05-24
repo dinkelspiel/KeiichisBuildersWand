@@ -1,0 +1,16 @@
+name: KeiichisBuildersWand
+version: 1.0
+author: willmexe
+main: com.willmexe.keiichisbuilderswand.KeiichisBuildersWand
+api-version: 1.17
+depend: [keiichiscore]
+
+commands:
+  renderselection:
+    description: Render the builders wand selection
+    usage: /renderselection
+    permission: keiichisbuilderswand.renderselection
+  selectionclear:
+    description: Clears the builders wand selection
+    usage: /selectionclear
+    permission: keiichisbuilderswand.selectionclear
