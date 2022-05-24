@@ -1,8 +1,6 @@
 package com.willmexe.keiichisbuilderswand.events;
 
-import com.willmexe.keiichiscore.GlobalVariables;
-import com.willmexe.keiichiscore.classes.ClassHome;
-import com.willmexe.keiichiscore.gui.*;
+import com.willmexe.keiichisbuilderswand.GlobalVariables;
 import com.willmexe.keiichisbuilderswand.items.ItemBuildersWand;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

@@ -1,8 +1,6 @@
 package com.willmexe.keiichisbuilderswand.events;
 
-import com.willmexe.keiichiscore.GlobalVariables;
-import com.willmexe.keiichiscore.classes.ClassHelpers;
-import com.willmexe.keiichiscore.gui.GuiCraftBook;
+import com.willmexe.keiichisbuilderswand.GlobalVariables;
 import com.willmexe.keiichisbuilderswand.items.ItemBuildersWand;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -44,11 +42,6 @@ public class EventsPlayerInteract implements Listener {
             }
         } else if(player.getItemInHand().getItemMeta().getDisplayName().contains("Builder's Wand") && ItemBuildersWand.wand_positions.get(player.getUniqueId().toString()).state == ItemBuildersWand.State.build) {
             player.sendMessage(GlobalVariables.error_prefix + "You can't use the wand while another selection is in progress.");
-        } else if (player.getItemInHand().getItemMeta().getDisplayName().contains("Crafter's Handbook")) {
-            GuiCraftBook gui = new GuiCraftBook();
-            gui.init();
-
-            player.openInventory(gui.getInventory());
         }
     }
 

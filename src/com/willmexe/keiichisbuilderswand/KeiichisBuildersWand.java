@@ -4,7 +4,6 @@ import com.willmexe.keiichisbuilderswand.commands.CommandRenderSelection;
 import com.willmexe.keiichisbuilderswand.commands.CommandSelectionClear;
 import com.willmexe.keiichisbuilderswand.events.EventsInventory;
 import com.willmexe.keiichisbuilderswand.events.EventsPlayerInteract;
-import com.willmexe.keiichiscore.gui.GuiCraftBook;
 import com.willmexe.keiichisbuilderswand.items.ItemBuildersWand;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -33,8 +32,6 @@ public class KeiichisBuildersWand extends JavaPlugin {
         ItemBuildersWand.init();
 
         getServer().getConsoleSender().sendMessage(GlobalVariables.title + "Initialized");
-
-        GuiCraftBook.add("§fBuilder's Wand", Material.NETHERITE_AXE, "\uEFD8");
 
         schedule(10, 2);
     }

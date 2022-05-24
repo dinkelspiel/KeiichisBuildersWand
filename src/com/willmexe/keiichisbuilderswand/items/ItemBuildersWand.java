@@ -1,7 +1,7 @@
 package com.willmexe.keiichisbuilderswand.items;
 
+import com.willmexe.keiichisbuilderswand.KeiichisBuildersWand;
 import com.willmexe.keiichiscore.GlobalVariables;
-import com.willmexe.keiichiscore.KeiichisCore;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -42,7 +42,7 @@ public class ItemBuildersWand {
         recipeBuilderswand.addIngredient(Material.NETHERITE_AXE);
         recipeBuilderswand.addIngredient(Material.NETHER_STAR);
 
-        KeiichisCore.getPlugin().getServer().addRecipe(recipeBuilderswand);
+        KeiichisBuildersWand.getPlugin().getServer().addRecipe(recipeBuilderswand);
     }
 
     public static boolean fillBlocks(Player sender, Location pos1, Location pos2, Material block) {
@@ -140,8 +140,8 @@ public class ItemBuildersWand {
         for(var i : wand_positions.entrySet())  {
             if(i.getValue().pos1 != null && i.getValue().pos2 != null) {
                 UUID uuid = UUID.fromString(i.getKey().toString());
-                if(KeiichisCore.getPlugin().getServer().getPlayer(uuid) != null) {
-                    KeiichisCore.getPlugin().getServer().getPlayer(uuid).performCommand("renderselection");
+                if(KeiichisBuildersWand.getPlugin().getServer().getPlayer(uuid) != null) {
+                    KeiichisBuildersWand.getPlugin().getServer().getPlayer(uuid).performCommand("renderselection");
                 }
             }
         }
@@ -151,9 +151,9 @@ public class ItemBuildersWand {
         for(var i : wand_positions.entrySet())  {
             if(i.getValue().pos1 != null && i.getValue().pos2 != null) {
                 UUID uuid = UUID.fromString(i.getKey().toString());
-                if(KeiichisCore.getPlugin().getServer().getPlayer(uuid) != null) {
+                if(KeiichisBuildersWand.getPlugin().getServer().getPlayer(uuid) != null) {
                     if(wand_positions.get(i.getKey()).state == ItemBuildersWand.State.build) {
-                        KeiichisCore.getPlugin().getServer().getPlayer(uuid).performCommand("renderselection");
+                        KeiichisBuildersWand.getPlugin().getServer().getPlayer(uuid).performCommand("renderselection");
                         if(wand_positions.get(i.getKey()).blocks.size() > 0) {
                             wand_positions.get(i.getKey()).pos1.getWorld().setBlockData(
                                     wand_positions.get(i.getKey()).blocks.get(0),
