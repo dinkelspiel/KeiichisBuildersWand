@@ -18,7 +18,6 @@ public class EventsInventory implements Listener {
         Player player = (Player) e.getWhoClicked();
 
         if (e.getView().getTitle().contains("Crafting")) {
-            e.setCancelled(true);
             if(ItemBuildersWand.wand_positions.get(player.getUniqueId().toString()) == null) {
                 return;
             }
